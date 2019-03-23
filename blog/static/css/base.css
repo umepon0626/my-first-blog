@@ -1,0 +1,26 @@
+header {
+    width: auto;
+    background-color: blueviolet;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+header h1 {
+    font-size: inherit;
+}
+
+.header-list ul {
+    width: auto;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+
+}
+
+
+
+li a {
+    color: white
+}

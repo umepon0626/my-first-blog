@@ -1,0 +1,52 @@
+{% extends "blog/base.html" %}
+{% block content %}
+{% load static %}
+
+<div id="carousel-sample" class="carousel slide" data-ride="carousel" data-interval="3000">
+    <!-- 以下は画像下部の○○○の部分の設定-->
+    <!-- class="active"で初期に表示される画像を設定している-->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-sample" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-sample" data-slide-to="1"></li>
+        <li data-target="#carousel-sample" data-slide-to="2"></li>
+    </ol>
+
+    <!--画像スライドの中身-->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <a href='/'><img src="{% static 'home.png'%}" alt="..."></a>
+            <div class="carousel-caption">
+                <!--画像の説明 -->
+                <h1>梅原　隆一</h1>
+                <p>雇ってみませんか？</p>
+            </div>
+        </div>
+        <div class="item">
+            <a href="/skill"><img src="{% static 'skill.jpg'%}" alt="..."></a>
+            <div class="carousel-caption">
+                <h1>スキル</h1>
+            </div>
+        </div>
+
+        <div class="item">
+            <a href="/contact"><img src="{% static 'contact.jpeg'%}" alt="..."></a>
+            <div class="carousel-caption">
+                <h1>お問い合わせ</h1>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 左 右の矢印の設定 -->
+    <a class="left carousel-control" href="#carousel-sample" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">戻る</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-sample" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">次へ</span>
+    </a>
+</div>
+<a class="twitter-timeline" href="https://twitter.com/astrona0626?ref_src=twsrc%5Etfw">Tweets by astrona0626</a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% endblock content %}
